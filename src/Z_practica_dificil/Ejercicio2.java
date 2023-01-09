@@ -1,6 +1,5 @@
-package Practica;
+package Z_practica_dificil;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 enum meses{
@@ -33,10 +32,10 @@ public class Ejercicio2 {
                         temperaturas_madrid = inicializar_array(temperaturas_madrid);
                         break;
                 case 2:
-                        meses mes_mayor = mayor_temperatura(temperaturas_madrid);
+                        meses_mio mes_mayor = mayor_temperatura(temperaturas_madrid);
                         System.out.println("El mes con mayor temperatura es " + mes_mayor.toString());
                         break;
-                case 3: meses mes_menor = menor_temperatura(temperaturas_madrid);
+                case 3: meses_mio mes_menor = menor_temperatura(temperaturas_madrid);
                         System.out.println("El mes con mayor temperatura es " + mes_menor.toString());
                         break;
                 case 4:  System.out.println("Introduzca el numero del mes del que quiere saber temperatura");
@@ -55,14 +54,14 @@ public class Ejercicio2 {
                     break;
                 case 7:
                        boolean es=false;
-                       meses valor1,valor2;
+                       meses_mio valor1,valor2;
                        String cadena="";
                        System.out.println("Introduzca el primer mes a comparar");
                         cadena=sc.next();
-                       valor1=  meses.valueOf(cadena.toUpperCase());
+                       valor1=  meses_mio.valueOf(cadena.toUpperCase());
                        System.out.println("Introduzca el segundo mes a comparar");
                         cadena=sc.next();
-                       valor2=  meses.valueOf(cadena.toUpperCase());
+                       valor2=  meses_mio.valueOf(cadena.toUpperCase());
                        es = comparar(valor1,valor2,temperaturas_madrid);
                        if (es){
                            System.out.println("son iguales");
@@ -76,7 +75,7 @@ public class Ejercicio2 {
         } while (opcion != 0);
     }
 
-    private static boolean comparar(meses valor1, meses valor2, float[] temperaturas_madrid) {
+    private static boolean comparar(meses_mio valor1, meses_mio valor2, float[] temperaturas_madrid) {
         boolean resultado=false;
         int i = sacar_mes_numero(valor1);
         int j = sacar_mes_numero(valor2);
@@ -90,7 +89,7 @@ public class Ejercicio2 {
         return resultado;
     }
 
-    private static int sacar_mes_numero(meses valor1) {
+    private static int sacar_mes_numero(meses_mio valor1) {
         int numero=0;
         switch (valor1)
         {
@@ -139,8 +138,8 @@ public class Ejercicio2 {
         return temperatura;
     }
 
-    public static meses mayor_temperatura(float[] temperaturas){
-        meses mayor=meses.valueOf("No existe");
+    public static meses_mio mayor_temperatura(float[] temperaturas){
+        meses_mio mayor= meses_mio.valueOf("No existe");
         float aux=0;
         int indice=0;
         for (int i=0;i<temperaturas.length;i++) {
@@ -157,28 +156,28 @@ public class Ejercicio2 {
 
     }
 
-    private static meses sacar_mes_enumerado(int indice) {
-        meses mes=meses.valueOf("No existe");
+    private static meses_mio sacar_mes_enumerado(int indice) {
+        meses_mio mes= meses_mio.valueOf("No existe");
         switch (indice)
         {
-            case 0: mes = meses.ENERO;break;
-            case 1: mes = meses.FEBRERO;break;
-            case 2: mes = meses.MARZO;break;
-            case 3: mes = meses.ABRIL;break;
-            case 4:mes = meses.MAYO;break;
-            case 5:mes = meses.JUNIO;break;
-            case 6:mes = meses.JULIO;break;
-            case 7:mes = meses.AGOSTO;break;
-            case 8:mes = meses.SEPTIEMBRE;break;
-            case 9:mes = meses.OCTUBRE;break;
-            case 10:mes = meses.NOVIEMBRE;break;
-            case 11:mes = meses.DICIEMBRE;break;
+            case 0: mes = meses_mio.ENERO;break;
+            case 1: mes = meses_mio.FEBRERO;break;
+            case 2: mes = meses_mio.MARZO;break;
+            case 3: mes = meses_mio.ABRIL;break;
+            case 4:mes = meses_mio.MAYO;break;
+            case 5:mes = meses_mio.JUNIO;break;
+            case 6:mes = meses_mio.JULIO;break;
+            case 7:mes = meses_mio.AGOSTO;break;
+            case 8:mes = meses_mio.SEPTIEMBRE;break;
+            case 9:mes = meses_mio.OCTUBRE;break;
+            case 10:mes = meses_mio.NOVIEMBRE;break;
+            case 11:mes = meses_mio.DICIEMBRE;break;
         }
         return mes;
     }
 
-    public static meses menor_temperatura(float[] temperaturas){
-        meses menor=meses.valueOf("No existe");
+    public static meses_mio menor_temperatura(float[] temperaturas){
+        meses_mio menor= meses_mio.valueOf("No existe");
         float aux=0;
         int indice=0;
         for (int i=0;i<temperaturas.length;i++) {
@@ -204,40 +203,40 @@ public class Ejercicio2 {
               float temperatura;
               switch (i){
 
-                  case 0: System.out.println("Introduzca temperatura de "+meses.ENERO);
+                  case 0: System.out.println("Introduzca temperatura de "+ meses_mio.ENERO);
                       array_inicializado[i]=sc.nextFloat();
                           break;
-                  case 1: System.out.println("Introduzca temperatura de "+meses.FEBRERO);
+                  case 1: System.out.println("Introduzca temperatura de "+ meses_mio.FEBRERO);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 2: System.out.println("Introduzca temperatura de "+meses.MARZO);
+                  case 2: System.out.println("Introduzca temperatura de "+ meses_mio.MARZO);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 3: System.out.println("Introduzca temperatura de "+meses.ABRIL);
+                  case 3: System.out.println("Introduzca temperatura de "+ meses_mio.ABRIL);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 4: System.out.println("Introduzca temperatura de "+meses.MAYO);
+                  case 4: System.out.println("Introduzca temperatura de "+ meses_mio.MAYO);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 5: System.out.println("Introduzca temperatura de "+meses.JUNIO);
+                  case 5: System.out.println("Introduzca temperatura de "+ meses_mio.JUNIO);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 6: System.out.println("Introduzca temperatura de "+meses.JULIO);
+                  case 6: System.out.println("Introduzca temperatura de "+ meses_mio.JULIO);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 7: System.out.println("Introduzca temperatura de "+meses.AGOSTO);
+                  case 7: System.out.println("Introduzca temperatura de "+ meses_mio.AGOSTO);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 8: System.out.println("Introduzca temperatura de "+meses.SEPTIEMBRE);
+                  case 8: System.out.println("Introduzca temperatura de "+ meses_mio.SEPTIEMBRE);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 9: System.out.println("Introduzca temperatura de "+meses.OCTUBRE);
+                  case 9: System.out.println("Introduzca temperatura de "+ meses_mio.OCTUBRE);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 10: System.out.println("Introduzca temperatura de "+meses.NOVIEMBRE);
+                  case 10: System.out.println("Introduzca temperatura de "+ meses_mio.NOVIEMBRE);
                       array_inicializado[i]=sc.nextFloat();
                       break;
-                  case 11: System.out.println("Introduzca temperatura de "+meses.DICIEMBRE);
+                  case 11: System.out.println("Introduzca temperatura de "+ meses_mio.DICIEMBRE);
                       array_inicializado[i]=sc.nextFloat();
                       break;
 

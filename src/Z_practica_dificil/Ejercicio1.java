@@ -1,4 +1,4 @@
-package Practica;
+package Z_practica_dificil;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -46,7 +46,7 @@ public class Ejercicio1 {
                     numero_veces=comprobar_numeroveces(lista_compra,elemento);break;
             case 6:   System.out.println("introduzca el elmento que quiere buscar");
                       elemento=sc.next();
-                      comprobar_vocales(elemento,comprobar_numeroveces(lista_compra,elemento));
+                      comprobar_vocales(elemento,comprobar_numeroveces(lista_compra,elemento));break;
             case 7: System.out.println("introduzca el elmento que quiere borrar");
                     String producto_eliminar = sc.next();
                     String[] lista_compra_nueva_eliminado = new String[tamanyo--];
