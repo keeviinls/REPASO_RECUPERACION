@@ -1,4 +1,4 @@
-package Practicaprogramacion;
+package Z_PracticaprogramacionFACIL;
 
 import java.util.Scanner;
 
